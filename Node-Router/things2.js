@@ -8,7 +8,6 @@ require('./things_schema.js');
 // mongoose.connect('mongodb://localhost/thing');
 var Thing=mongoose.model('Thing');
 
-
 router2.get('/',(req,res)=>{
     res.send('Things 2 was called');
 });
