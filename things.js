@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var app=express();
 
 var mongoose=require('mongoose');
 //create a db using mongoose
@@ -8,7 +9,6 @@ var mongoose=require('mongoose');
 require('./things_schema.js');
 //get the model created for Thing
 var Thing=mongoose.model('Thing');
-
 
 router.get('/', function(req, res){
    res.send('GET route on things.');

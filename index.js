@@ -12,6 +12,16 @@ var things = require('./things.js');
 var things2=require('./things2');
 var things3=require('./things3');
 
+app.get('/',(req,res,next) => {
+    res.status(200).send({
+        message:"server is running "
+    })
+ })
+
+//  app.get('/',(req,res,next)=>{
+//      res.status(200).send("Server is running")
+//  })
+ 
 app.use('/things', things);
 app.use('/things2',things2);
 app.use('/things3',things3); 
